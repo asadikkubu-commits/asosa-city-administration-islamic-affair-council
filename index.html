@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asosa City Islamic Affairs Council</title>
+
+<meta name="description" content="Official website of Asosa City Islamic Affairs Council">
+<meta name="keywords" content="Asosa, Islamic Affairs, Council, Ethiopia, Islam Asosa">
+<meta name="author" content="Asosa City Islamic Affairs Council">
+<meta name="robots" content="index, follow">
+
+<style>
+body {font-family: Arial, sans-serif; margin:0; background:#f4f6f7;}
+header {background:#0b3d2e; color:white; text-align:center; padding:20px;}
+nav {background:#146b4a; text-align:center; padding:10px;}
+nav button {
+  margin:5px; padding:8px 12px; border:none; cursor:pointer;
+  background:white; color:#146b4a; font-weight:bold; border-radius:5px;
+}
+.container {padding:20px; text-align:center;}
+.card {
+  background:white; padding:20px; margin:15px auto;
+  max-width:700px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+footer {background:#0b3d2e; color:white; text-align:center; padding:15px; margin-top:30px;}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div style="display:flex; align-items:center; justify-content:center; gap:15px;">
+    <svg width="60" height="60" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="#ffffff"/>
+      <path d="M50 15 C40 35, 40 55, 50 75 C60 55, 60 35, 50 15Z" fill="#0b3d2e"/>
+      <circle cx="50" cy="50" r="6" fill="#146b4a"/>
+    </svg>
+    <div>
+      <h1 style="margin:0;">Asosa City Islamic Affairs Council</h1>
+      <p style="margin:0;">Official Islamic Council Website</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('ar')">العربية</button>
+  <button onclick="setLang('am')">አማርኛ</button>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <h2 id="welcomeTitle">Welcome</h2>
+    <p id="welcomeText"></p>
+  </div>
+
+  <div class="card">
+    <h2 id="aboutTitle"></h2>
+    <p id="aboutText"></p>
+  </div>
+
+  <div class="card">
+    <h2 id="servicesTitle"></h2>
+    <p id="servicesText"></p>
+  </div>
+
+  <div class="card">
+    <h2 id="contactTitle"></h2>
+    <p id="contactText"></p>
+  </div>
+</div>
+
+<footer>
+© 2026 Asosa City Islamic Affairs Council
+</footer>
+
+<script>
+const content = {
+ en: {
+  welcomeTitle:"Welcome",
+  welcomeText:"Official page of Asosa City Islamic Affairs Council.",
+  aboutTitle:"About Us",
+  aboutText:"We serve the Muslim community in Asosa city.",
+  servicesTitle:"Services",
+  servicesText:"Mosques, education, events, guidance.",
+  contactTitle:"Contact",
+  contactText:"info@asosa.org"
+ },
+ ar: {
+  welcomeTitle:"مرحباً",
+  welcomeText:"الصفحة الرسمية لمجلس أسوسا الإسلامي.",
+  aboutTitle:"من نحن",
+  aboutText:"نخدم المجتمع المسلم في مدينة أسوسا.",
+  servicesTitle:"الخدمات",
+  servicesText:"المساجد، التعليم، الفعاليات، الإرشاد.",
+  contactTitle:"اتصل بنا",
+  contactText:"info@asosa.org"
+ },
+ am: {
+  welcomeTitle:"እንኳን ደህና መጡ",
+  welcomeText:"የአሶሳ ከተማ እስልምና ምክር ቤት ገጽ።",
+  aboutTitle:"ስለ እኛ",
+  aboutText:"ሙስሊም ማህበረሰብን እንደግፋለን።",
+  servicesTitle:"አገልግሎቶች",
+  servicesText:"መስጊድ፣ ትምህርት፣ ፕሮግራሞች።",
+  contactTitle:"ያግኙን",
+  contactText:"info@asosa.org"
+ }
+};
+
+function setLang(lang){
+ document.getElementById("welcomeTitle").innerText = content[lang].welcomeTitle;
+ document.getElementById("welcomeText").innerText = content[lang].welcomeText;
+ document.getElementById("aboutTitle").innerText = content[lang].aboutTitle;
+ document.getElementById("aboutText").innerText = content[lang].aboutText;
+ document.getElementById("servicesTitle").innerText = content[lang].servicesTitle;
+ document.getElementById("servicesText").innerText = content[lang].servicesText;
+ document.getElementById("contactTitle").innerText = content[lang].contactTitle;
+ document.getElementById("contactText").innerText = content[lang].contactText;
+}
+setLang("en");
+</script>
+
+</body>
+</html>
